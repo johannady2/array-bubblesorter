@@ -2,33 +2,33 @@
 let messyArray = [21,3,99,1,231,391,2,5,10,1];
 console.log(messyArray);
 
-// for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal array
-// {
+for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal array
+{
 
-//     let isItSortedNow = isArraySorted(messyArray);
+    let isItSortedNow = isArraySorted(messyArray);
 
 
-//     if(isItSortedNow === true)
-//     {
-//         break;
-//     }
-//     else
-//     {
-//         messyArray = oneIterationOfBubbleSort(messyArray);
-//         console.log(`above is the result of the ${k+1}th iteration of oneIterationOfBubbleSort(messyArray)`);
-//     }
+    if(isItSortedNow === true)
+    {
+        break;
+    }
+    else
+    {
+        messyArray = oneIterationOfBubbleSort(messyArray);
+        console.log(`above is the result of the ${k+1}th iteration of oneIterationOfBubbleSort(messyArray)`);
+    }
     
-// }
+}
 
 
 
 /*Uncomment the code below if you want to divide the messyArray into two arrays. then comment out the forloop above to 
 prevent messyArray from being sorted*/
-let halfLength =  Math.ceil(messyArray.length / 2);  
-let firstHalf = messyArray.splice(0, halfLength);//[1, 3, 2, 4, 591, 392, 391, 2]
-let secondHalf = messyArray.splice(-halfLength);//[5, 10, 2, 1, 1, 1, 20, 20]
-console.log(firstHalf);
-console.log(secondHalf);
+// let halfLength =  Math.ceil(messyArray.length / 2);  
+// let firstHalf = messyArray.splice(0, halfLength);//[1, 3, 2, 4, 591, 392, 391, 2]
+// let secondHalf = messyArray.splice(-halfLength);//[5, 10, 2, 1, 1, 1, 20, 20]
+// console.log(firstHalf);
+// console.log(secondHalf);
 
 function oneIterationOfBubbleSort(arr)
 {
@@ -127,27 +127,27 @@ function isArraySorted(arr)
 /*Uncomment the code below if you want to divide the messyArray into two arrays and run oneIterationOfBubbleSort() on each halves.
 then comment out the forloop below the declration of messyArray to prevent it from being sorted*/
 
-for(let k=0; k < firstHalf.length; k++)//because firstHalf.length is always higher than secondHalf.length due to ceil
-{
+// for(let k=0; k < firstHalf.length; k++)//because firstHalf.length is always higher than secondHalf.length due to ceil
+// {
 
-    let isItSortedNowFirst = isArraySorted(firstHalf);
-    let isItSortedNowSecond = isArraySorted(secondHalf);
+//     let isItSortedNowFirst = isArraySorted(firstHalf);
+//     let isItSortedNowSecond = isArraySorted(secondHalf);
 
-    if(isItSortedNowFirst === true && isItSortedNowSecond===true)
-    {break;}else
-    {
-        firstHalf = oneIterationOfBubbleSort(firstHalf);
-        console.log(`above is the result of the ${k+1}th iteration for firstHalf`);
+//     if(isItSortedNowFirst === true && isItSortedNowSecond===true)
+//     {break;}else
+//     {
+//         firstHalf = oneIterationOfBubbleSort(firstHalf);
+//         console.log(`above is the result of the ${k+1}th iteration for firstHalf`);
 
-        if(k+1 < secondHalf.length)
-        {
-            secondHalf = oneIterationOfBubbleSort(secondHalf);
-            console.log(`above is the result of the ${k+1}th iteration for secondHalf `);
-        }
-    }
+//         if(k+1 < secondHalf.length)
+//         {
+//             secondHalf = oneIterationOfBubbleSort(secondHalf);
+//             console.log(`above is the result of the ${k+1}th iteration for secondHalf `);
+//         }
+//     }
     
-}
+// }
 
-console.log(firstHalf);
-console.log(secondHalf);
+// console.log(firstHalf);
+// console.log(secondHalf);
 
