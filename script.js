@@ -1,27 +1,31 @@
+/*this commented out code is for when domManips.js is not used in index.html */
+
 //let messyArray = [1,3,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
-let messyArray = [21,3,99,1,231,391,2,5,10,1];
-console.log(messyArray);
+// let messyArray = [21,3,99,1,231,391,2,5,10,1];
+// console.log(messyArray);
 
-for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal array
-{
+// for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal array
+// {
 
-    let isItSortedNow = isArraySorted(messyArray);
-    if(isItSortedNow === true)
-    {
-        break;
-    }
-    else
-    {
-        messyArray = oneIterationOfBubbleSort(messyArray);
-        console.log(`above is the result of the ${k+1}th iteration of oneIterationOfBubbleSort(messyArray)`);
-    }
+//     let isItSortedNow = isArraySorted(messyArray);
+//     if(isItSortedNow === true)
+//     {
+//         break;
+//     }
+//     else
+//     {
+//         messyArray = oneIterationOfBubbleSort(messyArray);
+//         console.log(`above is the result of the ${k+1}th iteration of oneIterationOfBubbleSort(messyArray)`);
+//     }
     
-}
+// }
+
+/*----------------------uncomment from here and above if you don't want to use domManips.js--------------------*/
 
 
 
 /*Uncomment the code below if you want to divide the messyArray into two arrays. then comment out the forloop above to 
-prevent messyArray from being sorted*/
+prevent messyArray from being sorted. this code is for when domManips.js is not used in index.html*/
 // let halfLength =  Math.ceil(messyArray.length / 2);  
 // let firstHalf = messyArray.splice(0, halfLength);//[1, 3, 2, 4, 591, 392, 391, 2]
 // let secondHalf = messyArray.splice(-halfLength);//[5, 10, 2, 1, 1, 1, 20, 20]
@@ -123,7 +127,7 @@ function isArraySorted(arr)
 
 
 /*Uncomment the code below if you want to divide the messyArray into two arrays and run oneIterationOfBubbleSort() on each halves.
-then comment out the forloop below the declration of messyArray to prevent it from being sorted*/
+then comment out the forloop below the declration of messyArray to prevent it from being sorted.this code is for when domManips.js is not used in index.html*/
 
 // for(let k=0; k < firstHalf.length; k++)//because firstHalf.length is always higher than secondHalf.length due to ceil
 // {
