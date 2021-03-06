@@ -6,8 +6,6 @@ for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal a
 {
 
     let isItSortedNow = isArraySorted(messyArray);
-
-
     if(isItSortedNow === true)
     {
         break;
