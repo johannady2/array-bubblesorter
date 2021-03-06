@@ -32,6 +32,7 @@ prevent messyArray from being sorted. this code is for when domManips.js is not 
 // console.log(firstHalf);
 // console.log(secondHalf);
 
+
 function oneIterationOfBubbleSort(arr)
 {
     let originalarrLength = arr.length;
