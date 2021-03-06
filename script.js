@@ -91,5 +91,18 @@ function removeUndefinedFromArray(arrayWithUndefineds)
 for(let k=0; k < firstHalf.length; k++)
 {
     firstHalf = oneIterationOfBubbleSort(firstHalf);
-    console.log(`this is the result of the ${k+1}th iteration`)
+    console.log(`above is the result of the ${k+1}th iteration for firstHalf`);
+
+    if(k+1 < secondHalf.length)
+    {
+        secondHalf = oneIterationOfBubbleSort(secondHalf);
+        console.log(`above is the result of the ${k+1}th iteration for secondHalf `);
+    }
+    
 }
+
+
+
+
+console.log(firstHalf);
+console.log(secondHalf);
