@@ -25,6 +25,8 @@
 
                 let messyArray = integersArr;
                 console.log(messyArray);
+                document.getElementById('lengthDisplay').textContent = `ARRAY LENGTH: [${messyArray.length}]`;
+                document.getElementById('originalArrayDisplay').textContent = `ORIGINAL ARRAY: [${messyArray}]`;
                 for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal array
                 {   
                     

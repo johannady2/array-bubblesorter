@@ -38,15 +38,13 @@ function oneIterationOfBubbleSort(arr)
     let originalarrLength = arr.length;
     let newArray = arr;
     let startHere = 0;
- 
+    
     for(startHere = 0; startHere < originalarrLength; startHere++)
     {
         
         let a = newArray[startHere];
         let b = newArray[startHere+1];
-       console.log(`[${startHere}]:${a} and  [${startHere+1}]:${b}`);
-     
-
+        console.log(`[${startHere}]:${a} and  [${startHere+1}]:${b}`);
         let compareAB = isAGreaterThanB(a,b);
         
         
@@ -56,8 +54,7 @@ function oneIterationOfBubbleSort(arr)
 
         if(compareAB === false)
         {
-            console.log(`splicing 2 items newArray starting from index ${startHere}`);
-           
+            console.log(`splicing 2 items newArray starting from index ${startHere}`)
             newArray.splice(startHere, 2);
             console.log('after splicing');
             console.log(newArray);
@@ -87,7 +84,6 @@ function oneIterationOfBubbleSort(arr)
     let filteredNewArray = removeUndefinedFromArray(newArray);
     console.log('end of func newArray');
     console.log(filteredNewArray);
-    document.getElementById('resultsDisplay').textContent = `___FINAL RESULT: [${filteredNewArray}]`;
     return filteredNewArray;
 }
 
