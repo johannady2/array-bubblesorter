@@ -45,14 +45,8 @@ function oneIterationOfBubbleSort(arr)
         let a = newArray[startHere];
         let b = newArray[startHere+1];
        console.log(`[${startHere}]:${a} and  [${startHere+1}]:${b}`);
-     
-
         let compareAB = isAGreaterThanB(a,b);
-        
-        
-
-        
-     
+    
 
         if(compareAB === false)
         {

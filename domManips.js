@@ -24,9 +24,11 @@
 
 
                 let messyArray = integersArr;
+                let iterationsCount = 0;
                 console.log(messyArray);
-                document.getElementById('lengthDisplay').textContent = `ARRAY LENGTH: [${messyArray.length}]`;
+                document.getElementById('lengthDisplay').textContent = `ARRAY LENGTH: ${messyArray.length}`;
                 document.getElementById('originalArrayDisplay').textContent = `ORIGINAL ARRAY: [${messyArray}]`;
+               
                 for(let k=0; k < messyArray.length; k++)//directly using bubbleSort to orginal array
                 {   
                     
@@ -40,9 +42,12 @@
                     {
                         messyArray = oneIterationOfBubbleSort(messyArray);
                         console.log(`above is the result of the ${k+1}th iteration of oneIterationOfBubbleSort(messyArray)`);
+                        iterationsCount = k+1;
+                        
                     }
                     
                 }
+                document.getElementById('iterationsCountDisplay').textContent = `NUMBER OF ITERATIONS: ${iterationsCount}`;
             }
 
             return isValid;
