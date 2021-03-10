@@ -108,19 +108,36 @@ function removeUndefinedFromArray(arrayWithUndefineds)
       return filtered;
 }
 
+// function isArraySorted(arr)//
+// {
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i+1] && (arr[i+1] > arr[i]))
+//         {
+//             continue;
+//         } else if(arr[i+1] && (arr[i+1] < arr[i]))
+//         {
+//             return false;
+//         }
+//     }
+//     return true;
+// }//This returns true for //isArraySorted([1,0,5,8,0,0,7,25]); which is wrong. I think the if(arr[i+i]) is returning false whenever it gets a zero. and by default we get true because the condition is not caught by the if else statements.
+
 function isArraySorted(arr)
 {
-    for(let i=0;i<arr.length;i++){
-        if(arr[i+1] && (arr[i+1] > arr[i]))
+    for(let i=0;i<arr.length;i++)
+    {
+        if(arr[i+1] > arr[i])
         {
             continue;
-        } else if(arr[i+1] && (arr[i+1] < arr[i]))
+        } else
         {
             return false;
         }
     }
     return true;
 }
+
+
 
 
 

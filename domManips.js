@@ -34,6 +34,8 @@
                     
                  
                     let isItSortedNow = isArraySorted(messyArray);
+                    console.log(`value checked in isArraySorted ${messyArray}`);
+                    console.log(`is array sorted: ${isItSortedNow}`);
                     if(isItSortedNow === true)
                     {
                         break;
